@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>检查页面更改</title>
+</head>
+<body>
+
+  <h1>页面更改检测</h1>
+
+  <!-- 按钮用于触发检查 -->
+  <button id="checkChangeButton">检查更改</button>
+
+  <!-- 显示结果 -->
+  <p id="result"></p>
+
+  <script>
+    // 模拟扩展对页面的更改
+    // 你可以根据需求自行修改这部分代码，或通过扩展来触发这些更改
+    setTimeout(() => {
+      const a = document.createElement('a');
+      a.setAttribute('data-expanded-url', 'nstagram.com/p/');
+      a.classList.add('hoverZoomLink');
+      document.body.appendChild(a);
+
+      const img = document.createElement('img');
+      img.setAttribute('src', 'http://gravatar.com/avatar/');
+      img.classList.add('hoverZoomLink');
+      document.body.appendChild(img);
+    }, 2000); // 延迟2秒模拟扩展插入元素
+
+    // 监听按钮点击事件
+    document.getElementById('checkChangeButton').addEventListener('click', function() {
+      // 使用 querySelector 来检查是否有带 hoverZoomLink 类的元素
+      const element = document.querySelector('.hoverZoomLink');
+
+      // 判断该元素是否存在
+      const resultText = element ? 'YES' : 'NO';
+
+      // 显示结果
+      document.getElementById('result').textContent = resultText;
+    });
+  </script>
+
+</body>
+</html>
