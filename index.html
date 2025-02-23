@@ -18,17 +18,17 @@
   <script>
     // 模拟扩展对页面的更改
     // 你可以根据需求自行修改这部分代码，或通过扩展来触发这些更改
-    setTimeout(() => {
-      const a = document.createElement('a');
-      a.setAttribute('data-expanded-url', 'nstagram.com/p/');
-      a.classList.add('hoverZoomLink');
-      document.body.appendChild(a);
+    // setTimeout(() => {
+    //   const a = document.createElement('a');
+    //   a.setAttribute('data-expanded-url', 'nstagram.com/p/');
+    //   a.classList.add('hoverZoomLink');
+    //   document.body.appendChild(a);
 
-      const img = document.createElement('img');
-      img.setAttribute('src', 'http://gravatar.com/avatar/');
-      img.classList.add('hoverZoomLink');
-      document.body.appendChild(img);
-    }, 2000); // 延迟2秒模拟扩展插入元素
+    //   const img = document.createElement('img');
+    //   img.setAttribute('src', 'http://gravatar.com/avatar/');
+    //   img.classList.add('hoverZoomLink');
+    //   document.body.appendChild(img);
+    // }, 2000); // 延迟2秒模拟扩展插入元素
 
     // 监听按钮点击事件
     document.getElementById('checkChangeButton').addEventListener('click', function() {
